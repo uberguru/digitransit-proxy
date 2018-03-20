@@ -6,7 +6,7 @@
 
 set -o errexit -o nounset -o xtrace
 
-ORG=${ORG:-hsldevcom}
+ORG=${ORG:-uberguru}
 DOCKER_TAG=${TRAVIS_COMMIT:-latest}
 DOCKER_IMAGE=$ORG/digitransit-proxy:$DOCKER_TAG
 LATEST_IMAGE=$ORG/digitransit-proxy:latest
