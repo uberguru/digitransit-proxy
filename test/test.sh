@@ -29,15 +29,15 @@ echo starting echo server...
 #node server.js&
 #PID=$!
 
-sleep 3
+sleep 5
 curl -v http://127.0.0.1:8080
 
-#npm test
-#STATUS=$?
+npm test
+STATUS=$?
 
 #echo "stopping test server (pid:$PID)"
 #kill -9 $PID
-#echo stopping proxy-container $CONTAINER_ID
-#docker stop $CONTAINER_ID
+echo stopping proxy-container $CONTAINER_ID
+docker stop $CONTAINER_ID
 
-#exit $STATUS
+exit $STATUS
