@@ -24,17 +24,18 @@ curl -v http://127.0.0.1:9000
 
 echo started proxy-container $CONTAINER_ID
 echo starting echo server...
-node server.js &
-PID=$!
+node server.js
+#&
+#PID=$!
 
-curl -v http://127.0.0.1:8080
+#curl -v http://127.0.0.1:8080
 
-npm test
-STATUS=$?
+#npm test
+#STATUS=$?
 
-echo "stopping test server (pid:$PID)"
-kill -9 $PID
-echo stopping proxy-container $CONTAINER_ID
-docker stop $CONTAINER_ID
+#echo "stopping test server (pid:$PID)"
+#kill -9 $PID
+#echo stopping proxy-container $CONTAINER_ID
+#docker stop $CONTAINER_ID
 
-exit $STATUS
+#exit $STATUS
