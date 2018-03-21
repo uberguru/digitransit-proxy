@@ -17,6 +17,8 @@ echo $ADDHOSTS
 cd test
 
 npm install
+npm install -g forever
+forever start server.js
 
 CONTAINER_ID=`docker run -d -p 9000:8080 $ADDHOSTS hsldevcom/digitransit-proxy:integrationtest`
 
@@ -24,8 +26,7 @@ curl -v http://127.0.0.1:9000
 
 echo started proxy-container $CONTAINER_ID
 echo starting echo server...
-node server.js
-#&
+#node server.js&
 #PID=$!
 
 #curl -v http://127.0.0.1:8080
