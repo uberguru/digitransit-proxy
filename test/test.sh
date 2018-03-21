@@ -29,7 +29,8 @@ echo starting echo server...
 #node server.js&
 #PID=$!
 
-#curl -v http://127.0.0.1:8080
+sleep 3
+curl -v http://127.0.0.1:8080
 
 #npm test
 #STATUS=$?
